@@ -59,7 +59,7 @@ img{max-width:100%; display:block}
 }
 .brand{display:flex; align-items:center; gap:12px}
 .brand__logo{
-  height:44px;
+  height:70px;
   width:auto;
   display:block;
 }
@@ -455,7 +455,7 @@ input:focus, select:focus, textarea:focus{
 .footer__links a{color: rgba(18,32,24,.70); text-decoration:underline; text-underline-offset:3px}
 .footer__links a:hover{color: rgba(18,32,24,.90)}
 .footer__bottom{padding-top: 12px}
-.footer__logo{height: 38px; width:auto; display:block}
+.footer__logo{height: 70px; width:auto; display:block}
 
 /* ---------- Modal (scrollable) ---------- */
 .modal{position:fixed; inset:0; display:none; z-index:100}

@@ -20,7 +20,7 @@ document.addEventListener("keydown", (e) => {
 });
 
 // WhatsApp link builder (replace placeholder number!)
-const WHATSAPP_NUMBER = "491234567890"; // TODO: replace with your real number (international format, no +)
+const WHATSAPP_NUMBER = "4915208817669"; // TODO: replace with your real number (international format, no +)
 const defaultText =
   "Hallo Jonas, ich habe eine Anfrage zur Gartenpflege in (Ort).%0A%0ALeistung: ...%0ABeschreibung: ...%0AZeitraum: ...%0AFotos: (optional)";
 
@@ -149,7 +149,7 @@ $("#openImpressum").addEventListener("click", (e) => {
       Deutschland
     </p>
     <p><strong>Kontakt</strong><br/>
-      Telefon: +49 123 4567890 (Platzhalter)<br/>
+      Telefon: +49 1520 8817669 (Platzhalter)<br/>
       E-Mail: mail@beispiel.de (Platzhalter)
     </p>
     <p class="muted small">Hinweis: Bitte vor Veröffentlichung mit korrekten Daten ersetzen.</p>
@@ -158,10 +158,28 @@ $("#openImpressum").addEventListener("click", (e) => {
 
 $("#openDatenschutz").addEventListener("click", (e) => {
   e.preventDefault();
-  openModal("Datenschutz (Platzhalter)", `
-    <p>Diese Seite verwendet keine Tracking-Cookies und sammelt ohne dein Zutun keine Daten.</p>
-    <p>Das Kontaktformular sendet nichts automatisch – es erstellt nur einen Nachrichtentext zum Kopieren.</p>
-    <p class="muted small">Hinweis: Bitte vor Veröffentlichung eine vollständige Datenschutzerklärung ergänzen.</p>
+  openModal("Datenschutz", `
+    <p>🔐 Datenschutzerklärung (für Jonas Kieser – Landschafts- & Gartenpflege)</p>
+    <p>1. Verantwortlicher</p>
+    <p>Jonas Kieser</p>
+    <p>Landschafts- & Gartenpflege</p>
+    <p>71263 Hausen an der Würm</p>
+    <p>Deutschland</p>
+    <p>Telefon: +49 1520 8817669</p>
+    <p>E-Mail: [E-Mail-Adresse einfügen]</p>
+    <p>2. Allgemeine Hinweise</p>
+    <p>Der Schutz Ihrer persönlichen Daten ist uns wichtig.</p>
+    <p>Personenbezogene Daten werden vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften (DSGVO, BDSG) behandelt.</p>
+    <p>3. Hosting</p>
+    <p>Diese Website wird über einen externen Hosting-Dienstleister betrieben.</p>
+    <p>Beim Aufruf der Website werden automatisch folgende Daten erfasst:</p>
+    <p>-IP-Adresse</p>
+    <p>-Datum und Uhrzeit des Zugriffs</p>
+    <p>-Browsertyp und Version</p>
+    <p>-Betriebssystem</p>
+    <p>-Referrer-URL</p>
+    <p>Diese Daten dienen ausschließlich der technischen Bereitstellung und Sicherheit der Website und werden nicht zur Identifizierung von Personen verwendet.</p>
+    <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherem Betrieb der Website)</p>
   `);
 });
 

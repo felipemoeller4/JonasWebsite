@@ -382,7 +382,10 @@ h1{
 .quote p{margin:0 0 10px; color: rgba(18,32,24,.74); line-height:1.6}
 
 /* Accordion */
-.accordion{max-width: 860px}
+.accordion{
+  width: 100%;
+  max-width: none;
+}
 .acc{
   border-radius: var(--radius2);
   border: 1px solid var(--line);

@@ -158,28 +158,50 @@ $("#openImpressum").addEventListener("click", (e) => {
 
 $("#openDatenschutz").addEventListener("click", (e) => {
   e.preventDefault();
-  openModal("Datenschutz", `
-    <p>🔐 Datenschutzerklärung (für Jonas Kieser – Landschafts- & Gartenpflege)</p>
-    <p>1. Verantwortlicher</p>
-    <p>Jonas Kieser</p>
-    <p>Landschafts- & Gartenpflege</p>
-    <p>71263 Hausen an der Würm</p>
-    <p>Deutschland</p>
-    <p>Telefon: +49 1520 8817669</p>
-    <p>E-Mail: [E-Mail-Adresse einfügen]</p>
-    <p>2. Allgemeine Hinweise</p>
-    <p>Der Schutz Ihrer persönlichen Daten ist uns wichtig.</p>
-    <p>Personenbezogene Daten werden vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften (DSGVO, BDSG) behandelt.</p>
-    <p>3. Hosting</p>
-    <p>Diese Website wird über einen externen Hosting-Dienstleister betrieben.</p>
-    <p>Beim Aufruf der Website werden automatisch folgende Daten erfasst:</p>
-    <p>-IP-Adresse</p>
-    <p>-Datum und Uhrzeit des Zugriffs</p>
-    <p>-Browsertyp und Version</p>
-    <p>-Betriebssystem</p>
-    <p>-Referrer-URL</p>
-    <p>Diese Daten dienen ausschließlich der technischen Bereitstellung und Sicherheit der Website und werden nicht zur Identifizierung von Personen verwendet.</p>
-    <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherem Betrieb der Website)</p>
+   openModal("Datenschutz", `
+        <h4>Datenschutzerklärung</h4>
+
+        <p><strong>1. Verantwortlicher</strong><br>
+        Jonas Kieser<br>
+        Landschafts- & Gartenpflege<br>
+        71263 Hausen an der Würm<br>
+        Deutschland<br>
+        Telefon: +49 152 8817669</p>
+
+        <p><strong>2. Allgemeine Hinweise</strong><br>
+        Der Schutz Ihrer persönlichen Daten ist uns wichtig.
+        Personenbezogene Daten werden vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften (DSGVO, BDSG) behandelt.</p>
+
+        <p><strong>3. Hosting</strong><br>
+        Diese Website wird bei einem externen Hosting-Dienstleister betrieben.
+        Beim Aufruf der Website werden automatisch folgende Daten erfasst:</p>
+
+        <ul>
+            <li>IP-Adresse</li>
+            <li>Datum und Uhrzeit des Zugriffs</li>
+            <li>Browsertyp und Version</li>
+            <li>Betriebssystem</li>
+            <li>Referrer-URL</li>
+        </ul>
+
+        <p>Diese Daten dienen ausschließlich der technischen Bereitstellung und Sicherheit der Website.</p>
+
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO.</p>
+
+        <p><strong>4. Kontaktaufnahme</strong><br>
+        Bei Kontaktaufnahme per Telefon oder WhatsApp werden Ihre Angaben zur Bearbeitung Ihrer Anfrage verwendet.</p>
+
+        <p><strong>5. Kontaktformular</strong><br>
+        Das Formular auf dieser Website speichert keine Daten automatisch.
+        Beim Absenden wird lediglich ein Nachrichtentext erzeugt.</p>
+
+        <p><strong>6. Ihre Rechte</strong><br>
+        Sie haben jederzeit das Recht auf Auskunft, Berichtigung oder Löschung Ihrer personenbezogenen Daten.</p>
+
+        <p><strong>7. Beschwerderecht</strong><br>
+        Landesbeauftragter für Datenschutz Baden-Württemberg.</p>
+
+        <p>Stand: ${new Date().getFullYear()}</p>
   `);
 });
 

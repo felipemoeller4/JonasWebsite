@@ -1,9 +1,9 @@
 :root{
   /* Base */
-  --bg: #f5f3ee;                 /* warmes Off-White/Beige */
+  --bg: #f5f3ee;
   --panel: rgba(255,255,255,.86);
   --panel2: rgba(255,255,255,.72);
-  --text: #122018;               /* dunkles Grün-Schwarz */
+  --text: #122018;
   --muted: rgba(18,32,24,.68);
   --line: rgba(18,32,24,.10);
   --shadow: 0 18px 55px rgba(18,32,24,.12);
@@ -13,10 +13,10 @@
   --container: 1120px;
   --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
 
-  /* Brand / Accents (Natur + edel) */
-  --primary: #1f6b3a;            /* sattes Garten-Grün */
-  --primary2: #2f8f4a;           /* helleres Grün für Hover */
-  --accent: #d2a14a;             /* warmes Gold (kleine Highlights) */
+  /* Brand */
+  --primary: #1f6b3a;
+  --primary2: #2f8f4a;
+  --accent: #d2a14a;
   --danger: #c0352b;
 }
 
@@ -27,7 +27,7 @@ body{
   margin:0;
   font-family: var(--font);
   color: var(--text);
-  background: var(--bg);         /* EINHEITLICH - kein Gradient */
+  background: var(--bg);
   overflow-x:hidden;
 }
 
@@ -83,9 +83,18 @@ img{max-width:100%; display:block}
   box-shadow: 0 14px 34px rgba(18,32,24,.14);
   border: 1px solid rgba(18,32,24,.08);
 }
+.brand__text{display:grid; line-height:1.1}
 .brand__name{display:block; font-weight:900; letter-spacing:.2px}
 .brand__sub{display:block; font-size:.92rem; color: var(--muted); margin-top:1px}
 
+/* Logo image */
+.brand__logo{
+  height: 44px; /* <<<<< kleiner & passend */
+  width: auto;
+  display:block;
+}
+
+/* Nav */
 .nav{display:flex; align-items:center; gap:18px}
 .nav a{
   color: rgba(18,32,24,.86);
@@ -131,10 +140,7 @@ img{max-width:100%; display:block}
 .btn--small{padding:10px 14px; font-size:.95rem}
 
 /* Hero */
-.hero{
-  position:relative;
-  padding: 52px 0 22px;
-}
+.hero{position:relative; padding: 52px 0 22px}
 .hero__grid{
   display:grid;
   grid-template-columns: 1.2fr .9fr;
@@ -187,13 +193,6 @@ h1{
   border: 1px solid var(--line);
   box-shadow: 0 10px 22px rgba(18,32,24,.06);
 }
-.badge__icon{
-  width:36px; height:36px;
-  border-radius: 12px;
-  display:grid; place-items:center;
-  background: rgba(31,107,58,.10);
-  border: 1px solid rgba(31,107,58,.16);
-}
 .badge strong{display:block}
 .badge .muted{font-size:.95rem; margin-top:2px}
 
@@ -206,18 +205,6 @@ h1{
   box-shadow: var(--shadow);
 }
 .mediaCard img{width:100%; height:auto}
-.mediaCard__label{
-  display:flex; align-items:center; gap:10px;
-  padding: 12px 14px;
-  border-top: 1px solid var(--line);
-  color: rgba(18,32,24,.72);
-  font-size:.95rem;
-}
-.dot{
-  width:10px; height:10px; border-radius: 999px;
-  background: rgba(31,107,58,.92);
-  box-shadow: 0 0 0 4px rgba(31,107,58,.12);
-}
 
 .miniCard{
   border-radius: var(--radius2);
@@ -227,17 +214,9 @@ h1{
   box-shadow: 0 10px 22px rgba(18,32,24,.06);
 }
 .miniCard__top{display:flex; align-items:center; justify-content:space-between; gap:10px}
-.chip{
-  padding:6px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(210,161,74,.28);
-  background: rgba(210,161,74,.14);
-  color: rgba(18,32,24,.86);
-  font-weight:900;
-}
 .miniCard__p{margin:10px 0 0; color: rgba(18,32,24,.72); line-height:1.55}
 
-/* Remove hero glow completely (keep it clean) */
+/* Remove hero glow */
 .hero__bg{display:none}
 
 /* Trust */
@@ -257,16 +236,18 @@ h1{
   font-weight:800;
   box-shadow: 0 10px 22px rgba(18,32,24,.05);
 }
-.trust__icon{filter:saturate(1.05)}
 
 /* Sections */
 .section{padding: 62px 0}
 .section--alt{
-  background: transparent; /* kein Verlauf, kein extra Block */
+  background: transparent;
   border-top: 1px solid rgba(18,32,24,.06);
   border-bottom: 1px solid rgba(18,32,24,.06);
 }
-.section__head{display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom: 18px}
+.section__head{
+  display:flex; align-items:flex-end; justify-content:space-between;
+  gap:16px; margin-bottom: 18px
+}
 .section__head h2{margin:0; font-size: clamp(1.5rem, 2.2vw, 2rem)}
 .section__head p{margin:0; max-width: 62ch; color: rgba(18,32,24,.74)}
 
@@ -279,14 +260,6 @@ h1{
   background: rgba(255,255,255,.76);
   padding: 16px 16px;
   box-shadow: 0 12px 28px rgba(18,32,24,.08);
-}
-.card__icon{
-  width:44px; height:44px; border-radius: 16px;
-  display:grid; place-items:center;
-  background: rgba(31,107,58,.10);
-  border: 1px solid rgba(31,107,58,.16);
-  margin-bottom: 10px;
-  font-size: 1.2rem;
 }
 .card h3{margin: 0 0 8px}
 .card p{margin:0; color: rgba(18,32,24,.72); line-height:1.6}
@@ -320,8 +293,7 @@ h1{
   position:relative;
 }
 .about__note{
-  position:absolute; left: 12px; bottom: 12px;
-  right: 12px;
+  position:absolute; left: 12px; bottom: 12px; right: 12px;
   border-radius: 16px;
   border: 1px solid var(--line);
   background: rgba(245,243,238,.88);
@@ -330,22 +302,8 @@ h1{
   color: rgba(18,32,24,.78);
 }
 .about__content h2{margin-top:0}
-.ticks{display:grid; gap:8px; margin: 16px 0}
-.tick{display:flex; gap:10px; align-items:flex-start; color: rgba(18,32,24,.78)}
-.tick span{filter:saturate(1.05)}
-.split{display:flex; gap:12px; flex-wrap:wrap; margin: 16px 0 18px}
-.stat{
-  flex:1;
-  min-width: 200px;
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,.70);
-  padding: 12px 12px;
-  box-shadow: 0 10px 22px rgba(18,32,24,.06);
-}
-.stat__n{font-weight:900; font-size: 1.15rem}
 
-/* Gallery */
+/* Gallery & Testimonials */
 .gallery{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
@@ -365,7 +323,6 @@ h1{
   font-weight:800;
 }
 
-/* Testimonials */
 .testimonials{
   margin-top: 14px;
   display:grid;
@@ -381,11 +338,13 @@ h1{
 }
 .quote p{margin:0 0 10px; color: rgba(18,32,24,.74); line-height:1.6}
 
-/* Accordion */
+/* FAQ (FULL WIDTH like Projekte) */
 .accordion{
   width: 100%;
   max-width: none;
 }
+
+/* Accordion items */
 .acc{
   border-radius: var(--radius2);
   border: 1px solid var(--line);
@@ -394,26 +353,43 @@ h1{
   margin-bottom: 10px;
   box-shadow: 0 10px 22px rgba(18,32,24,.06);
 }
-.acc summary{
-  cursor:pointer;
-  font-weight:900;
-  padding: 10px 6px;
-}
+.acc summary{cursor:pointer; font-weight:900; padding: 10px 6px}
 .acc__body{padding: 0 6px 12px; color: rgba(18,32,24,.74); line-height:1.6}
 
-/* Contact */
+/* CONTACT (FULL WIDTH + better balance) */
 .contact{
   display:grid;
-  grid-template-columns: .95fr 1.05fr;
-  gap: 18px;
+  grid-template-columns: 1fr 1fr;   /* gleich breit */
+  gap: 24px;
+  align-items:start;
+  width: 100%;
 }
+
+/* linke Spalte optisch wie Card */
+.contact__left{
+  border-radius: calc(var(--radius2) + 6px);
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.76);
+  box-shadow: 0 12px 28px rgba(18,32,24,.08);
+  padding: 16px 16px;
+}
+
+/* form als Card */
+.form{
+  border-radius: calc(var(--radius2) + 6px);
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.76);
+  padding: 16px 16px;
+  box-shadow: 0 18px 45px rgba(18,32,24,.10);
+}
+
 .contactCards{display:grid; gap:10px; margin: 18px 0}
 .contactCard{
   display:flex; gap:12px; align-items:center;
   padding: 14px 14px;
   border-radius: var(--radius2);
   border: 1px solid var(--line);
-  background: rgba(255,255,255,.76);
+  background: rgba(255,255,255,.92);
   box-shadow: 0 10px 22px rgba(18,32,24,.06);
 }
 .contactCard__icon{
@@ -431,14 +407,7 @@ h1{
   color: rgba(18,32,24,.72);
 }
 
-/* Form */
-.form{
-  border-radius: calc(var(--radius2) + 6px);
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,.76);
-  padding: 16px 16px;
-  box-shadow: 0 18px 45px rgba(18,32,24,.10);
-}
+/* Form fields */
 label{display:grid; gap:8px; font-weight:900; color: rgba(18,32,24,.90)}
 
 input, select, textarea{
@@ -484,25 +453,46 @@ input:focus, select:focus, textarea:focus{
 .footer__links a{color: rgba(18,32,24,.70); text-decoration:underline; text-underline-offset:3px}
 .footer__links a:hover{color: rgba(18,32,24,.90)}
 .footer__bottom{padding-top: 12px}
+.footer__logo{height: 38px; width:auto; display:block}
 
-/* Modal */
+/* Modal (scrollable) */
 .modal{position:fixed; inset:0; display:none; z-index:100}
 .modal[aria-hidden="false"]{display:block}
 .modal__overlay{position:absolute; inset:0; background: rgba(18,32,24,.45); backdrop-filter: blur(6px)}
+
 .modal__card{
   position:relative;
   width:min(720px, calc(100% - 28px));
-  margin: 8vh auto 0;
+  margin: 6vh auto 0;
   border-radius: calc(var(--radius2) + 8px);
   border: 1px solid rgba(18,32,24,.14);
   background: rgba(255,255,255,.92);
-  backdrop-filter: blur(12px);
   box-shadow: var(--shadow);
   overflow:hidden;
+
+  max-height: 88vh;
+  display:flex;
+  flex-direction: column;
 }
-.modal__head{display:flex; align-items:center; justify-content:space-between; padding: 14px 14px; border-bottom: 1px solid rgba(18,32,24,.10)}
-.modal__body{padding: 14px 14px; color: rgba(18,32,24,.78); line-height:1.7}
-.modal__foot{padding: 14px 14px; border-top: 1px solid rgba(18,32,24,.10); display:flex; justify-content:flex-end}
+.modal__head{
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 14px 14px;
+  border-bottom: 1px solid rgba(18,32,24,.10);
+  flex: 0 0 auto;
+}
+.modal__body{
+  padding: 14px 14px;
+  color: rgba(18,32,24,.78);
+  line-height:1.7;
+  overflow-y:auto;
+  flex: 1 1 auto;
+}
+.modal__foot{
+  padding: 14px 14px;
+  border-top: 1px solid rgba(18,32,24,.10);
+  display:flex; justify-content:flex-end;
+  flex: 0 0 auto;
+}
 .iconbtn{
   width:42px; height:42px; border-radius: 14px;
   border: 1px solid rgba(18,32,24,.14);
@@ -518,7 +508,7 @@ input:focus, select:focus, textarea:focus{
   .trust__inner{grid-template-columns: repeat(2, 1fr)}
   .grid--3, .gallery, .testimonials{grid-template-columns: 1fr}
   .section__head{flex-direction:column; align-items:flex-start}
-  .header{top:44px}
+
   .navbtn{display:inline-block}
   .nav{
     position:absolute;
@@ -537,13 +527,4 @@ input:focus, select:focus, textarea:focus{
   }
   .nav.is-open{display:flex}
   .form__row{grid-template-columns: 1fr}
-}
-.brand__logo{
-  height: 70px;
-  width: auto;
-  display: block;
-}
-
-.footer__logo{
-  height: 70px;
 }

@@ -536,11 +536,11 @@ input:focus, select:focus, textarea:focus{
   .form__row{grid-template-columns: 1fr}
 }
 .brand__logo{
-  height: 25px;
+  height: 30px;
   width: auto;
   display: block;
 }
 
 .footer__logo{
-  height: 25px;
+  height: 30px;
 }

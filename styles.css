@@ -528,3 +528,14 @@ input:focus, select:focus, textarea:focus{
   .nav.is-open{display:flex}
   .form__row{grid-template-columns: 1fr}
 }
+/* Kontakt + Formular untereinander */
+#kontakt .contact{
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* optional: beide Karten gleich breit & sauber */
+#kontakt .contact__left,
+#kontakt .form{
+  width: 100%;
+}

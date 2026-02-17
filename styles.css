@@ -64,7 +64,7 @@ img{max-width:100%; display:block}
 
 /* Header */
 .header{
-  position:sticky; top:44px; z-index:55;
+  position:sticky; top:0; z-index:55;
   background: rgba(245,243,238,.66);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);

@@ -530,3 +530,83 @@ input:focus, select:focus, textarea:focus{
 
   .split{grid-template-columns: 1fr} /* Stats untereinander auf Handy */
 }
+/* =========================
+   HERO (clean & modern)
+========================= */
+
+.hero{
+  padding: 54px 0 18px;
+}
+
+.hero__grid{
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.hero__content{
+  padding: 6px 0;
+}
+
+.hero__cta{
+  margin-top: 14px;
+}
+
+.hero__list{
+  margin-top: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.hero__li{
+  color: rgba(18,32,24,.78);
+  line-height: 1.5;
+}
+
+/* rechte Spalte */
+.hero__side{
+  display: grid;
+  gap: 14px;
+}
+
+.hero__image{
+  border-radius: var(--radius2);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.76);
+  box-shadow: 0 12px 28px rgba(18,32,24,.08);
+}
+
+.hero__image img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Kurze Vorstellung wie "Über mich" */
+.hero__about{
+  padding: 4px 2px;
+}
+
+.hero__about h3{
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.hero__about p{
+  margin: 0;
+  color: rgba(18,32,24,.74);
+  line-height: 1.65;
+}
+
+/* Responsive */
+@media (max-width: 960px){
+  .hero__grid{
+    grid-template-columns: 1fr;
+  }
+  .hero{
+    padding: 36px 0 10px;
+  }
+}
